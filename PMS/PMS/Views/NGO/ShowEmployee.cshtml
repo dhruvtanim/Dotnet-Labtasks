@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "ShowEmployee";
+    Layout = "~/Views/Shared/ngolayout.cshtml";
+}
+@model List<PMS.EF.Models.Employee>
+<h3>Show Employee</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        
+    </tr>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.id</td>
+            <td>@emp.name</td>
+            
+            <td><a href="/Employee/CheckRequest/" class="btn btn-info">Assign work</a></td>
+        </tr>
+    }
+</table>

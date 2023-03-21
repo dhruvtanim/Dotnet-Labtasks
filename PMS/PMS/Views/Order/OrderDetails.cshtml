@@ -1,0 +1,42 @@
+﻿@model PMS.EF.Models.Order
+@{
+    ViewBag.Title = "OrderDetails";
+}
+
+<h2>OrderDetails</h2>
+<div>
+    <h4>Name: @Model.Name</h4>
+    <h4>Location: @Model.Location</h4>
+    <h4>Quantity: @Model.Qty</h4>
+    <h4>Lasttime: @Model.Lasttime</h4>
+</div>
+<h3>Products</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Quantity</th>
+        <td>Lasttime</td>
+    </tr>
+   
+
+    @foreach (var od in Model.OrderDetails)
+    {
+
+  
+
+        <tr>
+            <td>@od.Product.Name</td>
+            <td>@od.Location</td>
+            <td>@od.Qty</td>
+            <td>@od.Lasttime</td>
+            <
+        </tr>
+    }
+    <tr>
+       
+        
+    </tr>
+</table>
+
+
